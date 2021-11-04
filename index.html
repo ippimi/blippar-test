@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>WebAR SDK Basic Scene</title>
+    <script src="./blippar/webar-sdk-v1.0.7-beta.min.js"></script>
+  </head>
+
+  <body>
+
+    <a-scene
+    webar-scene="key: a0fc8813-e75d-495a-b7d8-bf89ebd4d6e4"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+    loading-screen="enabled: false">
+    <a-assets>    
+        <a-asset-item
+          id="astronaut"
+          src="models/astronaut.glb">
+        </a-asset-item>
+  ​    </a-assets>
+
+  <a-entity webar-stage>
+    <!-- Place 3D AR models here -->
+    <a-entity gltf-model="#astronaut" id="astronaut_1" 
+              rotation="0 0 0" position="0 0 0" scale="0.25 0.25 0.25"
+              webar-loadmonitor="elType: glb"></a-entity>
+</a-entity>
+    <a-camera webar-camera></a-camera>
+  </a-scene>
+  </body>
+</html>
